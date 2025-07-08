@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">What I Learned from Chapters 1–2 of *Grokking Simplicity* | Grokking Simplicity</title>
+<meta property="og:title" content="What I Learned from Chapters 1–2 of *Grokking Simplicity* | Grokking Simplicity" />
+<meta name="twitter:title" content="What I Learned from Chapters 1–2 of *Grokking Simplicity* | Grokking Simplicity" />
+<meta itemprop="name" content="What I Learned from Chapters 1–2 of *Grokking Simplicity* | Grokking Simplicity" />
+<meta name="application-name" content="What I Learned from Chapters 1–2 of *Grokking Simplicity* | Grokking Simplicity" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en" href="https://example.org/posts/functionalprogramming/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-07-08T00:00:00Z />
+    <meta property="article:published_time" content=2025-07-08T00:00:00Z />
+    <meta property="og:url" content="https://example.org/posts/functionalprogramming/" />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "What I Learned from Chapters 1–2 of *Grokking Simplicity*",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-07-08",
+        "description": "",
+        "wordCount":  395 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-07-08",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Grokking Simplicity"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.5">
+
+    
+    <meta property="og:url" content="https://example.org/posts/functionalprogramming/">
+  <meta property="og:site_name" content="Grokking Simplicity">
+  <meta property="og:title" content="What I Learned from Chapters 1–2 of *Grokking Simplicity*">
+  <meta property="og:description" content="A practical and human-centered summary of the core ideas from the opening chapters of Grokking Simplicity by Eric Normand.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-08T00:00:00+00:00">
+    <meta property="article:tag" content="Functional Programming">
+    <meta property="article:tag" content="Software Design">
+    <meta property="article:tag" content="Grokking Simplicity">
+    <meta property="article:tag" content="Clean Code">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What I Learned from Chapters 1–2 of *Grokking Simplicity*">
+  <meta name="twitter:description" content="A practical and human-centered summary of the core ideas from the opening chapters of Grokking Simplicity by Eric Normand.">
+
+
+    
+
+    <link rel="canonical" href="https://example.org/posts/functionalprogramming/">
+    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://example.org/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://example.org/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link active" href="/posts/functionalprogramming/">
+                        MrDruv-Blog
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">What I Learned from Chapters 1–2 of *Grokking Simplicity*</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-07-08T00:00:00&#43;00:00" itemprop="datePublished"> Jul 8, 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <blockquote>
+<p>Functional programming isn’t just about avoiding side effects—it’s about thinking clearly and writing code that behaves beautifully.</p></blockquote>
+<hr>
+<h2 id="welcome-to-grokking-simplicity">Welcome to <em>Grokking Simplicity</em></h2>
+<p>In the opening chapters of Eric Normand&rsquo;s <em>Grokking Simplicity</em>, we’re introduced to a more intuitive and practical approach to functional programming (FP)—one that trades dry theory for <strong>real-world clarity</strong>.</p>
+<h3 id="problem-with-typical-fp-definitions">Problem with Typical FP Definitions</h3>
+<p>Most FP definitions emphasize:</p>
+<ul>
+<li>No side effects</li>
+<li>Use of pure functions only</li>
+</ul>
+<p>But in real life, software <em>needs</em> side effects:</p>
+<ul>
+<li>We send emails</li>
+<li>Save data to databases</li>
+<li>Respond to button clicks</li>
+</ul>
+<p>Normand argues that these definitions, while academically correct, aren’t useful for <em>working engineers</em>. Enter a more practical, clear-headed way to think functionally…</p>
+<hr>
+<h2 id="actions-calculations-and-data-the-core-mental-model">Actions, Calculations, and Data: The Core Mental Model</h2>
+<p>This is the <strong>first big idea</strong> of the book. Here&rsquo;s how functional programmers mentally categorize code:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Examples</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Actions</strong></td>
+          <td>Depend on <em>when</em> or <em>how often</em> they run</td>
+          <td>Send email, update DB</td>
+      </tr>
+      <tr>
+          <td><strong>Calculations</strong></td>
+          <td>Deterministic computations based on input</td>
+          <td>Sum of list, string length</td>
+      </tr>
+      <tr>
+          <td><strong>Data</strong></td>
+          <td>Immutable facts, easy to transmit</td>
+          <td>JSON records, lists</td>
+      </tr>
+  </tbody>
+</table>
+<p>By <strong>identifying and separating</strong> these concerns, we can:</p>
+<ul>
+<li>Write testable, reusable code</li>
+<li>Avoid mysterious bugs</li>
+<li>Architect more maintainable systems</li>
+</ul>
+<hr>
+<h2 id="functional-thinking-in-action-tonis-robot-pizza-shop">Functional Thinking in Action: Toni&rsquo;s Robot Pizza Shop</h2>
+<p>To bring the concepts alive, the book introduces <strong>Toni</strong>, a futuristic pizza shop owner using robots and functional code to manage her kitchen.</p>
+<p><strong>Scenario</strong>:</p>
+<ul>
+<li>3 robots handle dough, sauce, and cheese in parallel.</li>
+<li>Without coordination, actions run out of order → chaos!</li>
+</ul>
+<p><strong>Solution</strong>: Introduce a “cut”—a synchronization point where robots wait for each other before proceeding. This ensures that prep steps finish <strong>before</strong> assembly starts.</p>
+<p>This story cleverly visualizes FP principles in real-world operations, showing how <strong>timeline diagrams</strong> and <strong>controlled coordination</strong> bring order to distributed systems.</p>
+<hr>
+<h2 id="stratified-design">Stratified Design</h2>
+<p>A smart way to organize code by <strong>rate of change</strong>:</p>
+<ul>
+<li><strong>Top Layer</strong>: Business logic (changes frequently)</li>
+<li><strong>Middle</strong>: Domain rules (pizza recipes, inventory handling)</li>
+<li><strong>Bottom</strong>: Tech stack (arrays, JS syntax)</li>
+</ul>
+<p>This structure helps developers:</p>
+<ul>
+<li>Isolate change</li>
+<li>Build on a stable foundation</li>
+<li>Avoid “spaghetti” dependencies</li>
+</ul>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>The opening chapters of <em>Grokking Simplicity</em> aren&rsquo;t about memorizing definitions—they’re about shifting your mental model.</p>
+<p>Functional thinking isn’t limited to one language or paradigm. It’s a <strong>pragmatic lens</strong> that applies across all codebases and all scales—from a small function to a full-blown distributed system.</p>
+<hr>
+<p><em>Up next</em>: We dive deeper into refactoring actions into calculations and organizing code by layers to enhance testability and reuse.</p>
+<p>Thanks for reading!</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2025 .
+        
+    </small>
+</footer>
+
+
+
+
+
+
+
+    
+    <script src="https://example.org/js/main.min.4ee188e1744c19816e95a540b2650ed9f033ea0371e74eac8e717355cfca8741.js" integrity="sha256-TuGI4XRMGYFulaVAsmUO2fAz6gNx506sjnFzVc/Kh0E="></script>
+
+    
+
+</body>
+</html>

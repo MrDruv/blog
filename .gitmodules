@@ -1,0 +1,12 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "plague"]
+	path = plague
+	url = https://github.com/brianreumere/plague.git
+[submodule "themes/plague"]
+	path = themes/plague
+	url = https://github.com/brianreumere/plague.git
+[submodule "themes/hugo-blog-awesome"]
+	path = themes/hugo-blog-awesome
+	url = https://github.com/hugo-sid/hugo-blog-awesome.git
