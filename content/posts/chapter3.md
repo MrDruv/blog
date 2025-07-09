@@ -17,3 +17,13 @@ tags:
 categories: ["Programming", "Functional Thinking"]
 summary: A practical and human-centered summary of the core ideas from the opening chapters of *Grokking Simplicity* by Eric Normand.
 ---
+
+## Distinguishing Actions,Calculations and Data
+
+**Definition of Funtional Programming**
+
+_Facts about Events_ - Ofcourse there are plenty of definitions from different dictionary.But this suits perfect for Functional programming.
+It highlights two points:
+
+1. It emphasizes neccessity of interpretation.
+2. It hightlights software engineer build information system.
