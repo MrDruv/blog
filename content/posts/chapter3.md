@@ -10,7 +10,7 @@ draft: false
 
 Eric Normand introduces a powerful mental model that divides all code into three categories: **Actions**, **Calculations**, and **Data**.
 
-In previous blog Welcome to _Grokking Simplicity_, the book laid the foundation by shifting our perspective away from traditional programming paradigms and toward a simpler mental model. It challenged the reader to rethink complexity by introducing:
+In previous blog Welcome to _Grokking Simplicity_, the blog laid the foundation by shifting our perspective away from traditional programming paradigms and toward a simpler mental model. It challenged the reader to rethink complexity by introducing:
 
 > The idea that programs should describe facts about events, not orchestrate step-by-step instructions.
 
