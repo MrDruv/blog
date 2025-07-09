@@ -18,13 +18,14 @@ categories: ["Programming", "Functional Thinking"]
 summary: A practical and human-centered summary of the core ideas from the opening chapters of *Grokking Simplicity* by Eric Normand.
 ---
 
-> _Facts about Events_
+> _The foundational mental model for functional programming_
 
 ---
 
 ## Distinguishing Actions,Calculations and Data
 
-In previous chapter we have seen catagories of Actions, Calculations and Data.Here we are going to learn how to identify these three catagories in real life and code.
+In previous chapter we have seen catagories of Actions, Calculations and Data.
+This chapter focuses on **Distinguishing Action, Calculations and Data**.
 
 **Definition of Funtional Programming**
 
@@ -33,3 +34,5 @@ It highlights two points:
 
 1. It emphasizes neccessity of interpretation.
 2. It hightlights software engineer build information system.
+
+## Applying functional thinking to new code
