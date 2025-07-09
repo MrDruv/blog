@@ -1,5 +1,5 @@
 ---
-title: "Welcome to *Grokking Simplicity*"
+title: "What I Learned from Chapters 1 of *Grokking Simplicity*"
 date: 2025-07-08
 author: "MrDruv"
 menu:
