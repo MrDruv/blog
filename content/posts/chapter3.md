@@ -25,6 +25,7 @@ summary: A practical and human-centered summary of the core ideas from the openi
 ## Distinguishing Actions,Calculations and Data
 
 In previous chapter we have seen catagories of Actions, Calculations and Data.
+
 This chapter focuses on **Distinguishing Action, Calculations and Data**.
 
 **Definition of Funtional Programming**
