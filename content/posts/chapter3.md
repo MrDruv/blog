@@ -16,7 +16,7 @@ In previous blog Welcome to _Grokking Simplicity_, the book laid the foundation 
 
 > A powerful classification system for all code: Actions, Calculations, and Data.
 
-> The notion that actions are infectious, spreading unpredictability through our systems, while calculations and data offer safety, testability, and clarity.
+> The notion that _Actions_ are infectious, spreading unpredictability through our systems, while _Calculations_ and _Data_ offer safety, testability, and clarity.
 
 ## Distinguishing Actions, Calculations, and Data
 
