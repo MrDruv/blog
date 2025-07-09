@@ -62,11 +62,11 @@ By **identifying and separating** these concerns, we can:
 **Code Example for Understanding Actions, Calculations and Data**
 | Code Task | Category | Why? |
 |------------------------------|--------------|----------------------------------------------------------------------|
-| **`getCartTotal(cart)`** | Calculations | Always returns the same total for the same cart |
-| **`sendConfirmationEmail(user)`**| Actions | Depends on when it’s sent — triggers external behavior |
-| **`user.email`** | Data | A fact — doesn’t change unless explicitly updated |
-| **`addItem(cart, item)`** | Actions | If it mutates the cart directly, it’s an action |
-| **`addItemImmutable(cart, item)`**| Calculations | Returns a new cart — no mutation, pure function |
+| **getCartTotal(cart)** | Calculations | Always returns the same total for the same cart |
+| **sendConfirmationEmail(user)**| Actions | Depends on when it’s sent — triggers external behavior |
+| **user.email** | Data | A fact — doesn’t change unless explicitly updated |
+| **addItem(cart, item)** | Actions | If it mutates the cart directly, it’s an action |
+| **addItemImmutable(cart, item)**| Calculations | Returns a new cart — no mutation, pure function |
 
 ---
 
