@@ -64,21 +64,23 @@ Refactoring legacy code becomes easier when you apply this model.
 
 #### Before (Imperative)
 
-````js
+```js
 function updateUserProfile(userId, formData) {
   const user = db.getUser(userId);
   user.name = formData.name;
   user.email = formData.email;
   db.save(user);
 }
+```
 
 #### After (Fuctional)
+
 ```js
 function updateProfile(user, formData) {
   return {
     ...user,
     name: formData.name,
-    email: formData.email
+    email: formData.email,
   };
 }
-````
+```
