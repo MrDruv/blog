@@ -4,11 +4,19 @@ date: 2025-07-09
 draft: false
 ---
 
+> Functional programming isn’t just a coding style—it’s a way of thinking
+
 ## Introduction
 
-Functional programming isn’t just a coding style—it’s a way of thinking. In _Grokking Simplicity_, Eric Normand introduces a powerful mental model that divides all code into three categories: **Actions**, **Calculations**, and **Data**. This post explores how to distinguish these categories and apply functional thinking to both new and existing codebases.
+Eric Normand introduces a powerful mental model that divides all code into three categories: **Actions**, **Calculations**, and **Data**.
 
----
+In previous blog Welcome to _Grokking Simplicity_, the book laid the foundation by shifting our perspective away from traditional programming paradigms and toward a simpler mental model. It challenged the reader to rethink complexity by introducing:
+
+> The idea that programs should describe facts about events, not orchestrate step-by-step instructions.
+
+> A powerful classification system for all code: Actions, Calculations, and Data.
+
+> The notion that actions are infectious, spreading unpredictability through our systems, while calculations and data offer safety, testability, and clarity.
 
 ## Distinguishing Actions, Calculations, and Data
 
