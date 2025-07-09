@@ -59,7 +59,7 @@ By **identifying and separating** these concerns, we can:
 - Avoid mysterious bugs
 - Architect more maintainable systems
 
-**other examples to understand Actions, Calculations and Data**
+**Other Examples for Understanding Actions, Calculations and Data**
 | Code Task | Category | Why? |
 |------------------------------|--------------|----------------------------------------------------------------------|
 | **`getCartTotal(cart)`** | Calculations | Always returns the same total for the same cart |
