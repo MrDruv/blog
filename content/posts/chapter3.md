@@ -25,6 +25,7 @@ summary: A practical and human-centered summary of the core ideas from the openi
 ## Distinguishing Actions,Calculations and Data
 
 In previous chapter we have seen catagories of Actions, Calculations and Data.Here we are going to learn how to identify these three catagories in real life and code.
+
 **Definition of Funtional Programming**
 
 _Facts about Events_ - Ofcourse there are plenty of definitions from different dictionary.But this suits perfect for Functional programming.
