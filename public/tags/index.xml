@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Grokking Simplicity</title>
-    <link>https://example.org/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Grokking Simplicity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clean Code</title>
-      <link>https://example.org/tags/clean-code/</link>
+      <link>http://localhost:1313/tags/clean-code/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/clean-code/</guid>
+      <guid>http://localhost:1313/tags/clean-code/</guid>
       
       <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>Functional Programming</title>
-      <link>https://example.org/tags/functional-programming/</link>
+      <link>http://localhost:1313/tags/functional-programming/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/functional-programming/</guid>
+      <guid>http://localhost:1313/tags/functional-programming/</guid>
       
       <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>Grokking Simplicity</title>
-      <link>https://example.org/tags/grokking-simplicity/</link>
+      <link>http://localhost:1313/tags/grokking-simplicity/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/grokking-simplicity/</guid>
+      <guid>http://localhost:1313/tags/grokking-simplicity/</guid>
       
       <description></description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>Software Design</title>
-      <link>https://example.org/tags/software-design/</link>
+      <link>http://localhost:1313/tags/software-design/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/software-design/</guid>
+      <guid>http://localhost:1313/tags/software-design/</guid>
       
       <description></description>
       

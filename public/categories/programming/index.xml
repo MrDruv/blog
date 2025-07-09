@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Grokking Simplicity</title>
-    <link>https://example.org/categories/programming/</link>
+    <link>http://localhost:1313/categories/programming/</link>
     <description>Recent content in Programming on Grokking Simplicity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What I Learned from Chapters 1–2 of *Grokking Simplicity*</title>
-      <link>https://example.org/posts/functionalprogramming/</link>
+      <link>http://localhost:1313/posts/functionalprogramming/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/posts/functionalprogramming/</guid>
+      <guid>http://localhost:1313/posts/functionalprogramming/</guid>
       
       <description>A practical and human-centered summary of the core ideas from the opening chapters of &lt;em&gt;Grokking Simplicity&lt;/em&gt; by Eric Normand.</description>
       

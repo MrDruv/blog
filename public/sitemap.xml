@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/clean-code/</loc>
+    <loc>http://localhost:1313/tags/clean-code/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/functional-programming/</loc>
+    <loc>http://localhost:1313/tags/functional-programming/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/functional-thinking/</loc>
+    <loc>http://localhost:1313/categories/functional-thinking/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/grokking-simplicity/</loc>
+    <loc>http://localhost:1313/tags/grokking-simplicity/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/programming/</loc>
+    <loc>http://localhost:1313/categories/programming/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/software-design/</loc>
+    <loc>http://localhost:1313/tags/software-design/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/functionalprogramming/</loc>
+    <loc>http://localhost:1313/posts/functionalprogramming/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url>
 </urlset>
