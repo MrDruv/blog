@@ -29,7 +29,7 @@ This chapter focuses on **Distinguishing Action, Calculations and Data**.
 
 **Definition of Funtional Programming**
 
-_Facts about Events_ - Ofcourse there are plenty of definitions from different dictionary.But this suits perfect for Functional programming.
+_Facts about Events_ - There are plenty of definitions from different dictionary.But this suits perfect for Functional programming.
 It highlights two points:
 
 1. It emphasizes neccessity of interpretation.
