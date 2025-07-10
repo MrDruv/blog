@@ -94,7 +94,7 @@ In functional terms:
 - This function is action-heavy — it depends on external systems (database) and mutates existing data.
 - It’s harder to test, since it has side effects and relies on context like a DB being available.
 
-#### After (Fuctional)
+#### After (Functional)
 
 ```js
 function updateProfile(user, formData) {
