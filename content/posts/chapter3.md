@@ -140,4 +140,8 @@ Whether you're starting a new project or refactoring old logic, this mindset hel
 
 Let your code describe facts about events, not control them.
 
+## Up Next
+
+We’ve learned how to see the three categories in our code. However, that is not enough. Functional programmers will want to transform code from actions to calculations in order to gain the benefits of calculations. We’ll see how in the next chapter.
+
 Thanks for reading!
