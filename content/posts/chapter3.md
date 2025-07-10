@@ -95,6 +95,20 @@ function updateProfile(user, formData) {
 
 ## Final Thoughts
 
+Introduces the core model: All code can be classified as either Actions, Calculations, or Data.
+
+Defines each clearly:
+
+> Actions depend on time or frequency and cause side effects.
+
+> Calculations are pure functions—same input, same output, no side effects.
+
+> Data is inert, immutable, and represents facts about events.
+
+Explains how to identify each: Actions often hide other actions or calculations; calculations can be composed of smaller calculations and data; data only contains more data.
+
+Emphasizes separation: Keeping these categories distinct makes code easier to test, debug, and reason about.
+
 By learning to distinguish between actions, calculations, and data, we unlock a deeper understanding of how software behaves—and how complexity creeps in. Functional thinking empowers us to write predictable, modular, and testable code by keeping actions isolated, elevating pure calculations, and letting data tell the story.
 
 Whether you're starting a new project or refactoring old logic, this mindset helps you design systems that are easier to reason about, more resilient to change, and elegantly simple.
