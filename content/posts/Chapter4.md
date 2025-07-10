@@ -91,7 +91,7 @@ To make calc_total() a **pure calculation**, we must:
 - Make inputs explicit (cart)
 - Use return values instead of modifying external state
 
-Step 3: Refactor Into a Calculation
+## Step 3: Refactor Into a Calculation
 
 ```
 function calc_cart_total() {
@@ -125,7 +125,8 @@ Recap: What Did We Learn?
 - Test the calculations in isolation
 - Reuse them anywhere without side effects
 
-Up Next...
+## Up Next...
+
 Improving th design of actions....stay tuned.
 
 Thanks for reading!
