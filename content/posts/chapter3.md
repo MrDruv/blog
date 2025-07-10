@@ -81,6 +81,22 @@ function updateUserProfile(userId, formData) {
 }
 ```
 
+updateUserProfile(userId, formData) – Imperative, Action-Oriented
+
+This function:
+
+- Fetches user data from the database: db.getUser(userId) -> Action
+
+- Mutates the user object directly: user.name = ... -> Impure Calculation (mutation)
+
+- Saves the updated object back to the database: db.save(user) -> Action
+
+In functional terms:
+
+- This function is action-heavy — it depends on external systems (database) and mutates existing data.
+
+- It’s harder to test, since it has side effects and relies on context like a DB being available.
+
 #### After (Fuctional)
 
 ```js
@@ -92,6 +108,19 @@ function updateProfile(user, formData) {
   };
 }
 ```
+
+updateProfile(user, formData) – Pure, Functional
+
+This one:
+
+- Takes in a user object and form data
+
+- Returns a new user object with updated name and email
+  In functional terms:
+
+- This is a pure calculation — no mutation, no database calls, no side effects.
+
+- Easier to test and reuse, because you control the inputs and always get the same output.
 
 ## Final Thoughts
 
@@ -109,7 +138,7 @@ Explains how to identify each: Actions often hide other actions or calculations;
 
 Emphasizes separation: Keeping these categories distinct makes code easier to test, debug, and reason about.
 
-By learning to distinguish between actions, calculations, and data, we unlock a deeper understanding of how software behaves—and how complexity creeps in. Functional thinking empowers us to write predictable, modular, and testable code by keeping actions isolated, elevating pure calculations, and letting data tell the story.
+Functional thinking says: **Use calculations to prepare data → use actions only where effects are needed**.
 
 Whether you're starting a new project or refactoring old logic, this mindset helps you design systems that are easier to reason about, more resilient to change, and elegantly simple.
 
