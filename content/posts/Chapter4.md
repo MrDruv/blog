@@ -4,163 +4,128 @@ date: 2025-07-10
 draft: false
 ---
 
-hello folks,
+# Hello folks
 
 ## Introduction
 
-In Chapter 4 of _Grokking Simplicity_, Eric Normand shows how messy, side-effect-heavy code can be transformed by **extracting pure calculations** from actions. This technique helps make your code easier to test, reuse, and reason about.
+In Chapter 4 of _Grokking Simplicity_, Eric Normand demonstrates how side-effect-heavy code can be simplified by **extracting pure calculations from actions**. This powerful technique leads to cleaner, testable, and reusable code — and it's a key step toward thinking functionally.
 
 ---
 
 ## Why Extract Calculations?
 
-Actions are unpredictable—they depend on timing, external systems, and often mutate state. But **calculations** are pure: they take inputs and return outputs without side effects.
+**Actions** are unpredictable:
 
-By pulling calculations out of actions, you:
+- They depend on external systems (like databases or the DOM)
+- They can fail
+- They can change over time
 
-- Make logic testable
-- Reuse it in multiple places
-- Avoid hidden dependencies
+In contrast, **calculations** are **pure**:
+
+- They take inputs
+- Return outputs
+- And have **no side effects**
+
+Extracting calculations helps you:
+
+- Make logic **testable**
+- **Reuse** code in multiple places
+- **Isolate complexity** and avoid hidden dependencies
 
 ---
 
-Lets dive into the Extraction of Calculation from Actions using following example.
+## Example: Shopping Cart Total at MegaMart
 
-## Example: Shopping Cart Total(Megamart)
+Let’s explore this idea with a classic example — calculating the total of a shopping cart.
 
-Ex: Megarmart.com(Shopping Cart)
-Below is the original Imperative code.
-
-```
-function calc_cart_total() {
-shopping_cart_total = 0;
-for(var i = 0; i < shopping_cart.length; i++) {
-var item = shopping_cart[i];
-shopping_cart_total += item.price;
-}
-set_cart_total_dom();
-update_shipping_icons();
-update_tax_dom();
-}
-```
-
-Reusable is not posible in this case.
-Reason:
-
-- The code reads the shopping cart from a global variable, but they need to process orders from the database, not the variable.
-- The code writes directly to the DOM, but they need to print tax receipts and shipping labels.
-
-## We need Change this code to funtional
-
-Suggessions to make it reusable:
-
-- Separate business rules from DOM updates.
-- Get rid of global variables.
-- Return the answer from the function.
-
-First step is to distinguish Actions,Calculations and data.This will give some idea of code.
-Here the code is action.So lets apply funtional programming.
-
-## Extracting a Calculation from an Action
-
-Now lets dive into the main part of the chapter(i.e: Extraction).
-
-First, we’ll isolate the calculation code, then convert its inputs and outputs to arguments and return values.
-
-original
+### Original Imperative Code
 
 ```
 function calc_cart_total() {
-shopping_cart_total = 0;
-for(var i = 0; i < shopping_cart.length; i++) {
-var item = shopping_cart[i];
-shopping_cart_total += item.price;
-}
-set_cart_total_dom();
-update_shipping_icons();
-update_tax_dom();
+  shopping_cart_total = 0;
+  for (var i = 0; i < shopping_cart.length; i++) {
+    var item = shopping_cart[i];
+    shopping_cart_total += item.price;
+  }
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
 }
 ```
 
-We are creating new function.
-Extracted
+Problems with This Code
+
+- Uses global variables (shopping_cart, shopping_cart_total)
+- Directly interacts with the DOM
+- Hard to test or reuse for other use cases (e.g., printing receipts)
+
+## Step 1: Extract a Subroutine
+
+First, we extract the logic that calculates the total:
 
 ```
 function calc_cart_total() {
-calc_total();
-set_cart_total_dom();
-update_shipping_icons();
-update_tax_dom();
-}
-function calc_total() {
-shopping_cart_total = 0;
-for(var i = 0; i < shopping_cart.length; i++) {
-var item = shopping_cart[i];
-shopping_cart_total += item.price;
-}
-}
-```
-
-This is function still an Action.
-Lets turn it into a calculation.
-
-The refactoring we just did might be called an extract subroutine.
-
-To change new function into **Calculation**, it is important to identify inputs and outputs.
-This function has two outputs and one input.
-Output:
-
-```
-shopping_cart_total=0;
-shopping_cart_total +=item.price;
-```
-
-input:
-
-```
-shopping_cart
-```
-
-```
-
-function calc_cart_total() {
-// Use return value to set the global variable
-shopping_cart_total = calc_total();
-set_cart_total_dom();
-update_shipping_icons();
-update_tax_dom();
+  calc_total();
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
 }
 
 function calc_total() {
-// Convert it to a local variabe
-var total = 0;
-for(var i = 0; i < shopping_cart.length; i++) {
-var item = shopping_cart[i];
-total += item.price;
+  shopping_cart_total = 0;
+  for (var i = 0; i < shopping_cart.length; i++) {
+    var item = shopping_cart[i];
+    shopping_cart_total += item.price;
+  }
 }
-return total;
-}
+
 ```
 
-We pass shopping cart as an argument
+This is cleaner, but calc_total() still mutates global state, so it’s still an action.
+
+## Step 2: Identify Inputs and Outputs
+
+To make calc_total() a **pure calculation**, we must:
+
+- Eliminate side effects (no DOM, no globals)
+- Make inputs explicit (cart)
+- Use return values instead of modifying external state
+
+Step 3: Refactor Into a Calculation
 
 ```
 function calc_cart_total() {
-shopping_cart_total = calc_total(shopping_cart);
-set_cart_total_dom();
-update_shipping_icons();
-update_tax_dom();
+  shopping_cart_total = calc_total(shopping_cart); // use return value
+  set_cart_total_dom();
+  update_shipping_icons();
+  update_tax_dom();
 }
-// Add an argument and use instead of global
+
 function calc_total(cart) {
-var total = 0;
-for(var i = 0; i < cart.length; i++) {
-var item = cart[i];
-total += item.price;
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    total += item.price;
+  }
+  return total;
 }
-return total;
-}
-
 ```
 
-At this point, **calc_total()** is a calculation. The only inputs and outputs are arguments and return values. And we’ve successfully extracted a calculation
+Now calc_total(cart) is a **pure function**:
+
+- no implicit inputs or outputs
+- No side effects
+- Easy to test!
+- Easy to reuse
+
+Recap: What Did We Learn?
+
+- Identify parts of your actions that are actually calculations
+- Extract those parts into pure functions
+- Test the calculations in isolation
+- Reuse them anywhere without side effects
+
+Up Next...
+Improving th design of actions....stay tuned.
+
+Thanks for reading!
