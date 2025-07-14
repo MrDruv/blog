@@ -6,7 +6,7 @@ tags: ["functional programming", "software design", "grokking simplicity"]
 description: "A complete guide to Chapter 5 of Grokking Simplicity—improving the design of actions for cleaner, more maintainable code."
 ---
 
-## 🧠 Designing Better Actions in Functional Programming
+## Designing Better Actions in Functional Programming
 
 _A Deep Dive into Chapter 5 of Grokking Simplicity_
 
