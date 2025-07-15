@@ -118,3 +118,5 @@ Chapter 6 teaches how to:
 - Defend your code with defensive copying
 
 These techniques help you write cleaner, safer, and more functional code—even in mutable languages like JavaScript.
+
+Thanks for reading!
