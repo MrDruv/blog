@@ -1,6 +1,6 @@
 ---
 title: "Staying Immutable in a Mutable Language"
-date: 2025-07-15
+date: 2025-07-14
 draft: false
 tags: ["functional programming", "immutability", "grokking simplicity"]
 description: "A complete guide to Chapter 6 of Grokking Simplicity—how to apply immutability in JavaScript using copy-on-write discipline."
