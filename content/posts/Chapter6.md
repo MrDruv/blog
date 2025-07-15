@@ -97,6 +97,16 @@ When working with external libraries or legacy code, you can’t assume they’l
 
 This protects your internal logic from unexpected mutations.
 
+## Why This Matters
+
+Even in JavaScript, you can write functional-style code by:
+
+- Avoiding mutation
+- Using copy-on-write
+- Treating data as immutable
+
+It’s not about using a perfect language—it’s about using better habits.
+
 ## Summary
 
 Chapter 6 teaches how to:
